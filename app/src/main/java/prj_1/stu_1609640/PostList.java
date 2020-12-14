@@ -78,12 +78,10 @@ public class PostList extends AppCompatActivity {
                 }
                 TextView tvTitle = convertView.findViewById(R.id.tvTitle);
                 TextView tvText = convertView.findViewById(R.id.tvText);
-                TextView tvId = convertView.findViewById(R.id.tvID);
                 try {
                     JSONObject jo = dataSet.getJSONObject(position);
                     tvTitle.setText(jo.getString("title"));
                     tvText.setText(jo.getString("txt"));
-                    tvId.setText(jo.getString("id"));
                     itemList.add(jo.getString("id"));
                     post_id = jo.getString("id");
                 } catch (Exception e) {
